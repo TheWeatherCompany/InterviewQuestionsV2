@@ -1,26 +1,8 @@
 import UIKit
 
-
-/**
- What will didOrder print?
- */
-
-struct Coffee {
-    let flavor: String
-    let size: String
-}
-
-let didOrder: ((Bool) -> Void)? = nil
-
-func orderCoffee( _ coffee: Coffee) -> Bool {
-    print("Ordered...\(coffee.size), \(coffee.flavor)")
-    return true
-}
-
-let coffee = Coffee(flavor: "Black", size: "Large")
-didOrder?(orderCoffee(coffee))
-
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~QUESTIONS 1 AND 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -42,7 +24,7 @@ struct Person: Codable {
     let age: Int
 }
 
-/**
+/** QUESTION 1
  Write a function to convert the above json string to a struct all Person
  */
 func personFrom(json: String) -> Person {
@@ -54,7 +36,7 @@ func personFrom(json: String) -> Person {
  */
 //print(personFrom(json: json))
 
-/**
+/** QUESTION 2
  Write a function to convert a Person struct string back to a json string
  */
 func jsonFrom(person: Person) -> String {
@@ -70,18 +52,20 @@ func jsonFrom(person: Person) -> String {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~QUESTION 3 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-/**
+/** QUESTION 3
  Implement an algorithm to determine if all characters in a given string are unique.
  False case:
  input: "Hello, World"
  output: false
  
  True case:
- input: "Yo Dawg!"
- output: false
+ input: "TWC is fun"
+ output: true
  */
 
 func isUniqueChars(str: String) -> Bool {
@@ -89,6 +73,8 @@ func isUniqueChars(str: String) -> Bool {
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~QUESTIONS 4 and 5 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -139,7 +125,7 @@ var moscow = Location("Moscow",temperature: 27)
 var ourLocations = [moscow,tokyo,newYork,paris]
 
 
-/**
+/** QUESTION 4
  Exercise 1: Re-write this function to return an array of Location sorted by their temperature (High to Low)
  */
 func orderByTemp(locations:[Location]) -> [Location]{
@@ -153,7 +139,7 @@ print("Exercise 1: reoder should give New York, Paris, Tokyo, Moscow:")
 printAllCities(cities: reorderedLocation)
 print("#######################################################")
 
-/**
+/** QUESTION 5
  Exercise 2: Re-write this function to return an array of locationName String in alphabetical order
  */
 func extractNameAndSort(locations:[Location]) -> [String]{
